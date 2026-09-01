@@ -1,0 +1,67 @@
+/* Base Flex Layout */
+div.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+div.flex-container > div {
+  margin: 10px;
+}
+
+.flex-item-full {
+  background-color: #122c60;
+  padding: 20px;
+  flex: 100%;
+}
+
+.flex-item-left,
+.flex-item-right {
+  background-color: #1b356f;
+  padding: 20px;
+  flex: 50%;
+}
+
+/* Page Elements */
+.flex-container h4 {
+  color: var(--page-blue);
+  margin: 12px 0 4px 0;
+}
+
+ul.steps-list {
+  padding-left: 20px;
+}
+
+ul.steps-list li {
+  margin-bottom: 8px;
+}
+
+.role-item {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.role-item strong {
+  color: #ffffff;
+}
+
+.sammy-btn {
+  display: inline-block;
+  background-color: var(--panel-border);
+  color: var(--page-ink);
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.sammy-btn:hover {
+  background-color: #ffe86b;
+}
+
+/* Mobile Layout Collapse */
+@media (max-width: 800px) {
+  div.flex-container {
+    flex-direction: column;
+  }
+}

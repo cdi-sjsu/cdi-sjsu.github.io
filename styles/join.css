@@ -1,24 +1,32 @@
 /* Base Flex Layout */
 div.flex-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-block: 1.25rem;
 }
 
 div.flex-container > div {
-  margin: 0.625rem;
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+div.join-executive {
+  max-width: 90%;
+  margin-inline: auto;
 }
 
 .flex-item-full {
   background-color: #122c60;
   padding: 1.25rem;
-  flex: 100%;
+  grid-column: 1 / -1;
 }
 
 .flex-item-left,
 .flex-item-right {
   background-color: #1b356f;
   padding: 1.25rem;
-  flex: 50%;
 }
 
 /* Page Elements */
@@ -37,7 +45,8 @@ ul.steps-list li {
 
 .role-item {
   margin-bottom: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .role-item strong {
@@ -53,15 +62,57 @@ ul.steps-list li {
   font-weight: 700;
   border-radius: 0.25rem;
   margin-top: 0.625rem;
+  max-width: 100%;
+  min-height: 2.75rem;
+  line-height: 1.5;
+  text-wrap: balance;
 }
 
 .sammy-btn:hover {
   background-color: #ffe86b;
 }
 
+.join-apply {
+  text-align: center;
+}
+
+.sammy-btn:focus-visible {
+  outline: 0.1875rem solid var(--page-blue);
+  outline-offset: 0.25rem;
+}
+
 /* Mobile Layout Collapse */
-@media (max-width: 50rem) {
+@media (max-width: 64rem) {
   div.flex-container {
-    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin-block: 1rem;
+  }
+
+  div.flex-container > div {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  div.join-executive {
+    max-width: 100%;
+  }
+
+  .role-item {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .steps-list {
+    line-height: 1.65;
+  }
+
+  .sammy-btn {
+    box-sizing: border-box;
+    max-width: 100%;
+    min-height: 2.75rem;
+    line-height: 1.5;
   }
 }

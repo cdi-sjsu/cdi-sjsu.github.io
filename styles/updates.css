@@ -1,3 +1,7 @@
+body {
+  overflow-wrap: anywhere;
+}
+
 .rainbowText {
   font-family: "Comic Sans MS", sans-serif;
   background-image: linear-gradient(

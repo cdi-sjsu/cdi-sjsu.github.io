@@ -22,15 +22,16 @@
     <script type="module" src="scripts/project-gallery.js"></script>
     <script type="module" src="scripts/comments.js"></script>
     <script src="https://u.widget.st/ar.js"></script>
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <script type="module" src="scripts/navigation.js"></script>
   </head>
-  <body>
+  <body class="has-mobile-nav">
     <!-- opening splash thing, JS fills this with the pop out images -->
     <div class="pop-intro" data-pop-intro aria-hidden="true">
       <div class="pop-intro__field" data-pop-intro-field></div>
     </div>
 
     <main class="margin">
-      <!-- little speech status at the top, the text scrolls with css -->
       <div class="status-post">
         <img src="public/images/speach.png" class="status-face"
           alt="Chip character smiling" />
@@ -41,6 +42,35 @@
       </div>
 
       <section class="home-columns">
+        <header class="side-nav-header site-navigation" data-site-navigation>
+          <div class="mobile-nav-bar">
+            <a class="mobile-nav-brand" href="index.html"
+              aria-label="CDI home">
+              <img src="public/images/cdi-logo-transparent.png" alt="" />
+            </a>
+            <button class="mobile-nav-toggle" type="button"
+              aria-expanded="false" aria-controls="site-nav-links"
+              data-nav-toggle>Menu</button>
+          </div>
+          <nav id="site-nav-links" class="floppy-nav floppy-nav--side"
+            aria-label="Site navigation" data-nav-links>
+            <a class="floppy-link floppy-link--home" href="index.html"
+              aria-label="Home" aria-current="page">
+              <img src="public/images/floppy-home.png" alt="" />
+              <span class="nav-link-label">Home</span>
+            </a>
+            <a class="floppy-link floppy-link--join" href="join.html"
+              aria-label="Join">
+              <img src="public/images/floppy-join.png" alt="" />
+              <span class="nav-link-label">Join</span>
+            </a>
+            <a class="floppy-link floppy-link--resources" href="resources.html"
+              aria-label="Resources">
+              <img src="public/images/floppy-resources.png" alt="" />
+              <span class="nav-link-label">Resources</span>
+            </a>
+          </nav>
+        </header>
         <div class="home-main-column">
           <div class="panel-heading">
             <img src="public/images/cdi-logo-transparent.png"
@@ -72,26 +102,6 @@
         <!-- side bar box, links can be added here later -->
         <div class="home-side-column">
           <aside class="panel side-board">
-            <!-- floppy image nav -->
-            <header class="side-nav-header">
-              <nav class="floppy-nav floppy-nav--side"
-                aria-label="Site navigation">
-                <a class="floppy-link floppy-link--home" href="index.html"
-                  aria-label="Home">
-                  <img src="public/images/floppy-home.png" alt="Home" />
-                </a>
-                <a class="floppy-link floppy-link--join" href="join.html"
-                  aria-label="Join">
-                  <img src="public/images/floppy-join.png" alt="Join" />
-                </a>
-                <a class="floppy-link floppy-link--resources"
-                  href="resources.html" aria-label="Resources">
-                  <img src="public/images/floppy-resources.png"
-                    alt="Resources" />
-                </a>
-              </nav>
-            </header>
-
             <div class="side-section">
               <h3>CLUB STATUS</h3>
               <p>Meeting room: TBD</p>
@@ -121,7 +131,8 @@
               <div class="side-section">
                 <a href="updates.html">
                   <img src="public/images/ComingSoon.jpg"
-                    alt="Shhh...Coming Soon - Chip" class="updates-preview" />
+                    alt="Shhh...Coming Soon - Chip"
+                    class="updates-preview" />
                 </a>
               </div>
             </div>
@@ -148,11 +159,26 @@
         <img src="public/images/projects-title-cdi.png"
           class="project-title-art" alt="Projects" />
         <div class="project-machine" data-project-gallery>
-          <img src="public/images/project-oscilloscope-frame.png"
-            class="project-machine__base" alt="" />
-          <div class="project-machine__screen">
-            <img src="public/images/under-construction-warning.jpg"
-              alt="Project preview" data-project-image />
+          <div class="project-machine__visual">
+            <div class="project-machine__art">
+              <img src="public/images/project-oscilloscope-frame.png"
+                class="project-machine__base" alt="" />
+              <div class="project-machine__screen">
+                <img src="public/images/under-construction-warning.jpg"
+                  alt="Project preview" data-project-image />
+              </div>
+            </div>
+            <div class="project-machine__controls">
+              <button
+                class="project-machine__button project-machine__button--back"
+                type="button" data-project-back>Back</button>
+              <a class="project-machine__github"
+                href="https://github.com/cdi-sjsu"
+                aria-label="Open project GitHub" data-project-github>GitHub</a>
+              <button
+                class="project-machine__button project-machine__button--next"
+                type="button" data-project-next>Next</button>
+            </div>
           </div>
           <div class="project-machine__text" tabindex="0" aria-live="polite"
             aria-atomic="true">
@@ -160,12 +186,6 @@
             <p
               data-project-description>Verilog implementation of John Conway's Game Of Life, Submitted to TinyTapeout in November 2025.</p>
           </div>
-          <button class="project-machine__button project-machine__button--back"
-            type="button" data-project-back>Back</button>
-          <a class="project-machine__github" href="https://github.com/cdi-sjsu"
-            aria-label="Open project GitHub" data-project-github>GitHub</a>
-          <button class="project-machine__button project-machine__button--next"
-            type="button" data-project-next>Next</button>
           <span class="project-machine__count"
             data-project-count>PROJECT 01</span>
         </div>

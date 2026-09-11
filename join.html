@@ -8,13 +8,43 @@
     <link rel="stylesheet" href="styles/floppy-nav.css" />
     <link rel="stylesheet" href="styles/home-layout.css" />
     <link rel="stylesheet" href="styles/join.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <script type="module" src="scripts/navigation.js"></script>
   </head>
-  <body>
+  <body class="has-mobile-nav">
+    <header class="site-navigation site-navigation--mobile"
+      data-site-navigation>
+      <div class="mobile-nav-bar">
+        <a class="mobile-nav-brand" href="index.html"
+          aria-label="CDI home">
+          <img src="public/images/cdi-logo-transparent.png" alt="" />
+        </a>
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false"
+          aria-controls="site-nav-links" data-nav-toggle>Menu</button>
+      </div>
+      <nav id="site-nav-links" class="floppy-nav floppy-nav--side"
+        aria-label="Site navigation" data-nav-links>
+        <a class="floppy-link floppy-link--home" href="index.html"
+          aria-label="Home">
+          <img src="public/images/floppy-home.png" alt="" />
+          <span class="nav-link-label">Home</span>
+        </a>
+        <a class="floppy-link floppy-link--join" href="join.html"
+          aria-label="Join" aria-current="page">
+          <img src="public/images/floppy-join.png" alt="" />
+          <span class="nav-link-label">Join</span>
+        </a>
+        <a class="floppy-link floppy-link--resources" href="resources.html"
+          aria-label="Resources">
+          <img src="public/images/floppy-resources.png" alt="" />
+          <span class="nav-link-label">Resources</span>
+        </a>
+      </nav>
+    </header>
     <main class="margin">
       <!-- MAIN MEMBER ONBOARDING CONTENT -->
       <div class="flex-container">
-        <div class="flex-item-left"
-          style="flex: 0 0 40.625rem; max-width: 100%;">
+        <div class="flex-item-left join-intro">
           <h2>Glad You're Interested!</h2>
           <p>In order to become an official member, complete these 3 simple steps:</p>
           <ul class="steps-list">
@@ -40,15 +70,13 @@
           <h1>We Are Hiring Officers!</h1>
           <p>The CDI team is looking for active indivduals that can help grow this club in the community and events we do. We have three main branches that we will be testing this semester that control our non-existent Standard Operation Procedures</p>
         </div>
-        <div class="flex-item-right"
-          style="flex: 0 0 15.625rem; max-width: 100%;">
+        <div class="flex-item-right join-art">
       insert chip inside this box
     </div>
       </div>
 
       <!-- EXECUTIVE BRANCH TOP BLOCK -->
-      <div class="flex-container"
-        style="max-width: 90%; margin-left: auto; margin-right: auto;">
+      <div class="flex-container join-executive">
         <div class="flex-item-full">
           <h2>The Executive Branch</h2>
           <p>Handles high-level strategic planning, club paperwork, forms, and team management. Oversees either the Community or Projects sub-branch and reports directly in weekly meetings with the President.</p>
@@ -114,7 +142,7 @@
 
       <!-- Join here thing -->
       <div class="flex-container">
-        <div class="flex-item-full" style="text-align: center;">
+        <div class="flex-item-full join-apply">
           <h2>Ready to Apply?</h2>
           <p>Roles are flexible, and we can set up a custom position tailored to your skills!</p>
           <a

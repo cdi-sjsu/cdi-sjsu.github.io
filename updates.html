@@ -7,8 +7,40 @@
     <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
     <title>Chip Design Initiative | Updates</title>
     <link rel="stylesheet" href="styles/updates.css" />
+    <link rel="stylesheet" href="styles/floppy-nav.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <script type="module" src="scripts/navigation.js"></script>
   </head>
-  <body>
+  <body class="has-mobile-nav">
+    <header class="site-navigation site-navigation--mobile"
+      data-site-navigation>
+      <div class="mobile-nav-bar">
+        <a class="mobile-nav-brand" href="index.html"
+          aria-label="CDI home">
+          <img src="public/images/cdi-logo-transparent.png" alt="" />
+        </a>
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false"
+          aria-controls="site-nav-links" data-nav-toggle>Menu</button>
+      </div>
+      <nav id="site-nav-links" class="floppy-nav floppy-nav--side"
+        aria-label="Site navigation" data-nav-links>
+        <a class="floppy-link floppy-link--home" href="index.html"
+          aria-label="Home">
+          <img src="public/images/floppy-home.png" alt="" />
+          <span class="nav-link-label">Home</span>
+        </a>
+        <a class="floppy-link floppy-link--join" href="join.html"
+          aria-label="Join">
+          <img src="public/images/floppy-join.png" alt="" />
+          <span class="nav-link-label">Join</span>
+        </a>
+        <a class="floppy-link floppy-link--resources" href="resources.html"
+          aria-label="Resources">
+          <img src="public/images/floppy-resources.png" alt="" />
+          <span class="nav-link-label">Resources</span>
+        </a>
+      </nav>
+    </header>
     <main>
       <p>Hey! this page is under-construction!!!!</p>
       <h2 class="rainbowText"> <i>Thanks for visitin</i></h2>

@@ -69,6 +69,7 @@
   /* sidebar version: three tiny floppies in a row */
   position: static;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
@@ -86,8 +87,11 @@
 .floppy-nav--side .floppy-link {
   position: static;
   display: block;
-  width: 4.1875rem;
-  height: 4.1875rem;
+  width: min(100%, 4rem);
+  flex: 0 1 4rem;
+  min-width: 2.75rem;
+  height: auto;
+  aspect-ratio: 1;
   transform: rotate(-1deg);
   animation: none;
   transition: transform 120ms steps(3, end), filter 120ms steps(3, end);
@@ -95,8 +99,8 @@
 }
 
 .floppy-nav--side .floppy-link img {
-  width: 4.1875rem;
-  height: 4.1875rem;
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 

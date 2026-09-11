@@ -2,19 +2,19 @@
   /* old outside-screen floppy nav, still used on pages that need it */
   position: fixed;
   top: 18vh;
-  right: -142px;
+  right: -8.875rem;
   z-index: 90;
-  width: 250px;
-  height: 460px;
+  width: 15.625rem;
+  height: 28.75rem;
 }
 
 .floppy-link {
   position: absolute;
   right: 0;
   display: block;
-  width: clamp(150px, 16vw, 245px);
+  width: clamp(9.375rem, 16vw, 15.3125rem);
   transform-origin: right center;
-  filter: drop-shadow(8px 8px 0 rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0.5rem 0.5rem 0 rgba(0, 0, 0, 0.35));
 }
 
 .floppy-link img {
@@ -29,20 +29,20 @@
 }
 
 .floppy-link--join {
-  top: 78px;
-  transform: translateX(38px) rotate(-3deg);
+  top: 4.875rem;
+  transform: translateX(2.375rem) rotate(-3deg);
   animation: floppy-join-close 180ms steps(4, end) both;
 }
 
 .floppy-link--resources {
-  top: 145px;
-  transform: translateX(76px) rotate(3deg);
+  top: 9.0625rem;
+  transform: translateX(4.75rem) rotate(3deg);
   animation: floppy-resources-close 180ms steps(4, end) both;
 }
 
 .floppy-nav:hover,
 .floppy-nav:focus-within {
-  right: -22px;
+  right: -1.375rem;
 }
 
 .floppy-nav:hover .floppy-link--home,
@@ -61,8 +61,8 @@
 }
 
 .floppy-link:focus-visible {
-  outline: 3px solid #ffd21f;
-  outline-offset: 4px;
+  outline: 0.1875rem solid #ffd21f;
+  outline-offset: 0.25rem;
 }
 
 .floppy-nav--side {
@@ -71,7 +71,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -86,17 +86,17 @@
 .floppy-nav--side .floppy-link {
   position: static;
   display: block;
-  width: 67px;
-  height: 67px;
+  width: 4.1875rem;
+  height: 4.1875rem;
   transform: rotate(-1deg);
   animation: none;
   transition: transform 120ms steps(3, end), filter 120ms steps(3, end);
-  filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, .35));
+  filter: drop-shadow(0.3125rem 0.3125rem 0 rgba(0, 0, 0, .35));
 }
 
 .floppy-nav--side .floppy-link img {
-  width: 67px;
-  height: 67px;
+  width: 4.1875rem;
+  height: 4.1875rem;
   object-fit: contain;
 }
 
@@ -125,68 +125,68 @@
 .floppy-nav--side .floppy-link:hover,
 .floppy-nav--side .floppy-link:focus-visible {
   transform: scale(1.07) rotate(0);
-  filter: drop-shadow(8px 8px 0 rgba(0, 0, 0, .4));
+  filter: drop-shadow(0.5rem 0.5rem 0 rgba(0, 0, 0, .4));
 }
 
 @keyframes floppy-join-open {
   from {
-    top: 78px;
-    transform: translateX(38px) rotate(-3deg);
+    top: 4.875rem;
+    transform: translateX(2.375rem) rotate(-3deg);
   }
 
   to {
-    top: 158px;
+    top: 9.875rem;
     transform: translateX(0) rotate(0);
   }
 }
 
 @keyframes floppy-resources-open {
   from {
-    top: 145px;
-    transform: translateX(76px) rotate(3deg);
+    top: 9.0625rem;
+    transform: translateX(4.75rem) rotate(3deg);
   }
 
   to {
-    top: 276px;
+    top: 17.25rem;
     transform: translateX(0) rotate(0);
   }
 }
 
 @keyframes floppy-join-close {
   from {
-    top: 138px;
+    top: 8.625rem;
     transform: translateX(0) rotate(0);
   }
 
   to {
-    top: 78px;
-    transform: translateX(38px) rotate(-3deg);
+    top: 4.875rem;
+    transform: translateX(2.375rem) rotate(-3deg);
   }
 }
 
 @keyframes floppy-resources-close {
   from {
-    top: 276px;
+    top: 17.25rem;
     transform: translateX(0) rotate(0);
   }
 
   to {
-    top: 145px;
-    transform: translateX(76px) rotate(3deg);
+    top: 9.0625rem;
+    transform: translateX(4.75rem) rotate(3deg);
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 47.5rem) {
   .floppy-nav {
     top: 14vh;
-    right: -112px;
-    width: 205px;
-    height: 380px;
+    right: -7rem;
+    width: 12.8125rem;
+    height: 23.75rem;
   }
 
   .floppy-nav:hover,
   .floppy-nav:focus-within {
-    right: -18px;
+    right: -1.125rem;
   }
 
   .floppy-nav--side,

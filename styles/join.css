@@ -5,39 +5,39 @@ div.flex-container {
 }
 
 div.flex-container > div {
-  margin: 10px;
+  margin: 0.625rem;
 }
 
 .flex-item-full {
   background-color: #122c60;
-  padding: 20px;
+  padding: 1.25rem;
   flex: 100%;
 }
 
 .flex-item-left,
 .flex-item-right {
   background-color: #1b356f;
-  padding: 20px;
+  padding: 1.25rem;
   flex: 50%;
 }
 
 /* Page Elements */
 .flex-container h4 {
   color: var(--page-blue);
-  margin: 12px 0 4px 0;
+  margin: 0.75rem 0 0.25rem 0;
 }
 
 ul.steps-list {
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 
 ul.steps-list li {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .role-item {
-  margin-bottom: 8px;
-  font-size: 14px;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
 }
 
 .role-item strong {
@@ -48,11 +48,11 @@ ul.steps-list li {
   display: inline-block;
   background-color: var(--panel-border);
   color: var(--page-ink);
-  padding: 10px 16px;
+  padding: 0.625rem 1rem;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 4px;
-  margin-top: 10px;
+  border-radius: 0.25rem;
+  margin-top: 0.625rem;
 }
 
 .sammy-btn:hover {
@@ -60,7 +60,7 @@ ul.steps-list li {
 }
 
 /* Mobile Layout Collapse */
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
   div.flex-container {
     flex-direction: column;
   }

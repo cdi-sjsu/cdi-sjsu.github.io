@@ -1,0 +1,40 @@
+.rainbowText {
+  font-family: "Comic Sans MS", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 40s linear infinite;
+}
+
+@keyframes move {
+  to {
+    background-position: 4500vh;
+  }
+}
+
+@media screen and (max-width: 56.25rem) {
+  .rainbowText {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .rainbowText {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rainbowText {
+    animation: none;
+  }
+}

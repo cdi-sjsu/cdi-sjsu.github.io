@@ -2,6 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'none';
+        base-uri 'none';
+        object-src 'none';
+        script-src 'self' https://u.widget.st/ar.js https://widget.st/embed/6006;
+        script-src-attr 'none';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src https://fonts.gstatic.com;
+        img-src 'self' https://widget.st/widget/o/comments/avatar/ https://widget.st/images/smileys/ https://www.gravatar.com/avatar/;
+        connect-src https://widget.st/widget/o/comments/6006/ https://widget.st/embed/6006/needs_captcha;
+        frame-src https://calendar.google.com/calendar/ https://widget.st/embed/bridge;
+        form-action 'none';" />
+    <meta name="referrer" content="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="public/favicon.png" />
     <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
@@ -125,6 +138,9 @@
             <iframe
               title="CDI Google Calendar"
               src="https://calendar.google.com/calendar/embed?src=cdi.sjsu%40gmail.com&ctz=America%2FLos_Angeles"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+              allow="camera 'none'; microphone 'none'; geolocation 'none'; payment 'none'"
+              referrerpolicy="no-referrer"
               scrolling="no"></iframe>
 
             <div>

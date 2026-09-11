@@ -2,6 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'none';
+        base-uri 'none';
+        object-src 'none';
+        script-src 'self';
+        script-src-attr 'none';
+        style-src 'self' https://fonts.googleapis.com;
+        style-src-attr 'none';
+        font-src https://fonts.gstatic.com;
+        img-src 'self';
+        form-action 'none';
+        require-trusted-types-for 'script';
+        trusted-types 'none';" />
+    <meta name="referrer" content="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="public/favicon.png" />
     <title>Chip Design Initiative | Join</title>
@@ -54,7 +68,7 @@
           </ul>
           <a
             href="https://sammyapp.sjsu.edu/feeds?type=club&type_id=36010&tab=about"
-            target="_blank" class="sammy-btn">
+            target="_blank" rel="noopener noreferrer" class="sammy-btn">
         Click here to join us on the Sammy App
       </a>
         </div>
@@ -147,7 +161,7 @@
           <p>Roles are flexible, and we can set up a custom position tailored to your skills!</p>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdFcKR8d9ciLlpzac3OwWoRgRr0LeM4Yr5LvDVc2op8PEnqgg/viewform"
-            target="_blank" class="sammy-btn">
+            target="_blank" rel="noopener noreferrer" class="sammy-btn">
         Apply for Officer Recruitment
       </a>
         </div>

@@ -598,3 +598,20 @@ body:has(.widget[open]) {
     border-right: 0;
   }
 }
+
+.grimoire-glow {
+  /* Smooth animation for the hover */
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  
+  /* Subtle resting purple glow */
+  filter: drop-shadow(0 0 8px rgba(160, 32, 240, 0.4));
+}
+
+.grimoire-glow:hover {
+  /* Intense purple glow that hugs the transparent edges */
+  filter: drop-shadow(0 0 25px rgba(160, 32, 240, 1));
+  
+  /* Pops the book out slightly */
+  transform: scale(1.05);
+  cursor: pointer;
+}
